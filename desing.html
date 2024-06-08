@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="C (6).png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body, html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            height: 100vh;
+            color: #fff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .interface {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        header {
+            padding: 10px 4%;
+            background-image: url(leo3.png);
+            width: 100%;
+            height: 90%;
+            background-repeat: no-repeat;
+        }
+
+        header > .interface {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .2s;
+        }
+
+        a {
+            color: #6e6e6e;
+            display: inline-block;
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        a:hover {
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        button:hover {
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .btn-contacto button {
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #2BFF00;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        section.especialidades {
+            padding: 40px;
+        }
+
+        section.especialidades .flex {
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .especialidades .especialidades-box {
+            color: #fff;
+            padding: 40px;
+            border: 1px solid #070707;
+            border-radius: 25px;
+            margin-top: 45px;
+            transition: .2s;
+            flex: 1 1 300px;
+        }
+
+        .especialidades .especialidades-box i,
+        .especialidades .especialidades-box img {
+            font-size: 70px;
+            color: #2BFF00;
+            border-radius: 50%;
+        }
+
+        .especialidades .especialidades-box a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .especialidades .especialidades-box h3 {
+            font-size: 28px;
+            margin: 15px 0;
+        }
+
+        .especialidades .especialidades-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffffff59;
+        }
+
+        section.sobre {
+            padding: 80px 4%;
+        }
+
+        section.sobre .flex {
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .sobre .txt-sobre {
+            color: #fff;
+            flex: 1 1 300px;
+        }
+
+        .sobre .txt-sobre h2 {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .sobre .txt-sobre h2 span {
+            display: block;
+        }
+
+        .sobre .txt-sobre p {
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .btn-social button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 0;
+            background-color: #2BFF00;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: .2s;
+        }
+
+        .image {
+            position: relative;
+            border-radius: 25px;
+            box-shadow: 0 0 40px 10px rgb(0, 0, 0);
+            transition: .2s;
+            flex: 1 1 300px;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px 10px rgb(32, 32, 32);
+        }
+
+        section.portfolio {
+            padding: 80px 4%;
+            box-shadow: 0 0 40px 10px #ffffff1a;
+        }
+
+        section.portfolio .flex {
+            justify-content: space-around;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .img-port {
+            width: 100%;
+            max-width: 360px;
+            height: 460px;
+            background-size: cover;
+            background-position: 100% 0%;
+            transition: 8s;
+            cursor: pointer;
+            border-radius: 40px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .img-port:hover {
+            background-position: 100% 100%;
+        }
+
+        .overley {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000af;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600px;
+            color: white;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .overley:hover {
+            opacity: 1;
+        }
+
+        section.formulario {
+            padding: 80px 4%;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            background-color: #1d1d1d;
+            border: none;
+            outline: none;
+            padding: 20px 15px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        form textarea {
+            resize: none;
+            max-height: 200px;
+        }
+
+        form .btn-enviar {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        form .btn-enviar input[type=submit] {
+            width: 120px;
+            background-color: #2BFF00;
+            color: #000;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        footer {
+            padding: 40px 4%;
+            box-shadow: 0 0 40px 10px #242424;
+        }
+
+        footer .flex {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .borda {
+            border-top: 2px solid #2BFF00;
+        }
+
+        footer .line-footer p i {
+            color: #2BFF00;
+            font-size: 22px;
+        }
+
+        footer .line-footer p a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 span {
+            color: #2BFF00;
+        }
+
+        form button{
+            background-color: #2BFF00;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 5px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+
+        }
+        @media (max-width: 1024px) {
+            header nav ul li {
+                padding: 0 20px;
+            }
+
+            .btn-contacto button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            h2.titulo {
+                font-size: 32px;
+            }
+
+            .text-topo-site h1 span {
+                font-size: 50px;
+            }
+
+            .topo-do-site h1 {
+                font-size: 36px;
+                line-height: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .btn-contacto button {
+                padding: 10px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <h2>Eleve o Seu Negócio <a href="#formulario"><span>Agora!</span></a></h2>
+        </div>
+    </header>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <a href="index.html">
+                            <img src="logo_cibercom.png" alt="Logotipo da agencia">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section id="formulario" class="formulario">
+                <div class="interface">
+                    <h2 class="titulo">FALA <span>COMIGO</span></h2>
+                    <form>
+                        <h1>Send Data to WhatsApp</h1>
+                        <label for="name">Name</label>
+                        <input type="text" class="name" id="name">
+                        <label for="email">Email</label>
+                        <input type="text" class="email" id="email">
+                        <label for="number">Number</label>
+                        <input type="text" class="number" id="number">
+                        <label for="message">Message</label>
+                        <textarea class="message" id="message"></textarea>
+                        <button type="button" onclick="sendwhatsapp();">Send via WhatsApp</button>
+                    </form>
+                    <script>
+                        function sendwhatsapp() {
+                            var phonenumber = "+351939769291";
+                            var name = document.querySelector('.name').value;
+                            var email = document.querySelector('.email').value;
+                            var number = document.querySelector('.number').value;
+                            var message = document.querySelector('.message').value;
+                            var url = "https://wa.me/" + phonenumber + "?text=" 
+                                    + "*Name:* " + name + "%0a" 
+                                    + "*Email:* " + email + "%0a"
+                                    + "*Number:* " + number + "%0a"
+                                    + "*Message:* " + message + "%0a%0a"
+                                    + "This is an example of send HTML form data to WhatsApp";
+                            window.open(url, '_blank').focus();
+                        }
+                    </script>
+                    <br>
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/cibercom.40?igsh=MTZzOHZlY21zcWJpYw=="><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.tiktok.com/@ciber.com5?_t=8meVE4TB0fx&_r=1"><button><i class="bi bi-tiktok"></i></button></a>
+                        <a href="https://www.facebook.com/profile.php?id=61559791553803"><button><i class="bi bi-facebook"></i></button></a>
+                    </div>
+                    <br>
+                    <div class="line-footer borda">
+                        <p><i class="bi bi-envelope"></i> <a href="mailto:cibercom40@gmail.com">cibercom40@gmail.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

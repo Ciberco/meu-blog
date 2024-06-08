@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C (6).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>CIBERCOM</title>
+    <style>
+       
+       body, html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #2BFF00 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .showcase {
+            background: url('lii.jfif') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .showcase h1 {
+            font-size: 55px;
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background: #2BFF00;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .dark {
+            background: #b9b9b9;
+            color: #000;
+            padding: 20px 0;
+        }
+        .dark h2 {
+            text-align: center;
+        }
+        header a img{
+            width: 100px;
+        }
+        section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #1d1d1d;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    width: 120px;
+    background-color: #2BFF00;
+    color: #000;
+    font-weight: 700px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Estilo do rodapé */
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #242424;
+}
+
+footer .flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #2BFF00;
+}
+
+footer .line-footer p i {
+    color: #2BFF00;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+    text-decoration: none;
+}
+span{
+    color: #2BFF00;
+}
+form button{
+            background-color: #2BFF00;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 5px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+
+        }
+        .especialidades .especialidades-box a{
+            color: #2BFF00;
+        }
+        .elemnto-logo {
+    padding: 0;
+    margin: none;
+}
+
+        form button{
+            background-color: #2BFF00;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 5px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: .2s;
+
+        }
+
+        header > .interface {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .2s;
+        }
+
+        a {
+            color: #6e6e6e;
+            display: inline-block;
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        a:hover {
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        button:hover {
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .btn-contacto button {
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #2BFF00;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        section.especialidades {
+            padding: 40px;
+        }
+
+        section.especialidades .flex {
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .especialidades .especialidades-box {
+            color: #fff;
+            padding: 40px;
+            border: 1px solid #070707;
+            border-radius: 25px;
+            margin-top: 45px;
+            transition: .2s;
+            flex: 1 1 300px;
+        }
+
+        .especialidades .especialidades-box i,
+        .especialidades .especialidades-box img {
+            font-size: 70px;
+            color: #2BFF00;
+            border-radius: 50%;
+        }
+
+        .especialidades .especialidades-box a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .especialidades .especialidades-box h3 {
+            font-size: 28px;
+            margin: 15px 0;
+        }
+
+        .especialidades .especialidades-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffffff59;
+        }
+
+        section.sobre {
+            padding: 80px 4%;
+        }
+
+        section.sobre .flex {
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .sobre .txt-sobre {
+            color: #fff;
+            flex: 1 1 300px;
+        }
+
+        .sobre .txt-sobre h2 {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .sobre .txt-sobre h2 span {
+            display: block;
+        }
+
+        .sobre .txt-sobre p {
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .btn-social button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 0;
+            background-color: #2BFF00;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: .2s;
+        }
+
+        .image {
+            position: relative;
+            border-radius: 25px;
+            box-shadow: 0 0 40px 10px rgb(0, 0, 0);
+            transition: .2s;
+            flex: 1 1 300px;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px 10px rgb(32, 32, 32);
+        }
+
+        section.portfolio {
+            padding: 80px 4%;
+            box-shadow: 0 0 40px 10px #ffffff1a;
+        }
+
+        section.portfolio .flex {
+            justify-content: space-around;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .img-port {
+            width: 100%;
+            max-width: 360px;
+            height: 460px;
+            background-size: cover;
+            background-position: 100% 0%;
+            transition: 8s;
+            cursor: pointer;
+            border-radius: 40px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .img-port:hover {
+            background-position: 100% 100%;
+        }
+
+        .overley {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000af;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600px;
+            color: white;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .overley:hover {
+            opacity: 1;
+        }
+
+        section.formulario {
+            padding: 80px 4%;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            background-color: #1d1d1d;
+            border: none;
+            outline: none;
+            padding: 20px 15px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        form textarea {
+            resize: none;
+            max-height: 200px;
+        }
+
+        form .btn-enviar {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        form .btn-enviar input[type=submit] {
+            width: 120px;
+            background-color: #2BFF00;
+            color: #000;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        footer {
+            padding: 40px 4%;
+            box-shadow: 0 0 40px 10px #242424;
+        }
+
+        footer .flex {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .borda {
+            border-top: 2px solid #2BFF00;
+        }
+
+        footer .line-footer p i {
+            color: #2BFF00;
+            font-size: 22px;
+        }
+
+        footer .line-footer p a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 span {
+            color: #2BFF00;
+        }
+
+        @media (max-width: 1024px) {
+            header nav ul li {
+                padding: 0 20px;
+            }
+
+            .btn-contacto button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            h2.titulo {
+                font-size: 32px;
+            }
+
+            .text-topo-site h1 span {
+                font-size: 50px;
+            }
+
+            .topo-do-site h1 {
+                font-size: 36px;
+                line-height: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .btn-contacto button {
+                padding: 10px 30px;
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+        .inline{
+            display: flex;
+        }
+        .container{
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo_cibercom.png" alt="logotipo da agencia"></a>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#missao">Missão</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#equipa">Equipa</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div>
+            <h1>Bem-vindo à CIBERCOM</h1>
+            <a href="#contacto" class="button">Vamos Conversar</a>
+        </div>
+    </section>
+<section class="inline">
+
+    <section id="sobre-nos" class="container">
+        <h2><span>Sobre Nós</span></h2>
+         <br>
+        <p><code>Bem-vindo à CIBERCOM, onde criatividade e inovação se encontram para transformar a sua marca numa referência no mercado digital. Somos uma agência de comunicação e serviços digitais apaixonada por contar histórias únicas e construir conexões autênticas entre marcas e os seus públicos.</code></p>
+    </section>
+
+    <section id="historia" class="dark">
+        <div class="container">
+            <h2>A Nossa História</h2>
+            <br>
+            <p><code>A CIBERCOM nasceu da visão de ELIAS CARVALHO, um apaixonado por comunicação e tecnologia, com anos de experiência no setor. Desde o início, o nosso objetivo tem sido oferecer soluções criativas e estratégicas que não só atendem às necessidades dos nossos clientes, mas também superam as suas expectativas. Acreditamos que cada marca tem uma história única para contar, e estamos aqui para garantir que essa história seja ouvida de forma impactante e memorável</code>.</p>
+        </div>
+    </section>
+</section>
+    
+<section class="inline">
+
+    <section id="missao" class="container">
+        <h2><span>A Nossa Missão</span></h2>
+        <br>
+        <p><code>A nossa missão é transformar ideias em experiências digitais envolventes. Trabalhamos lado a lado com os nossos clientes para entender as suas necessidades e desenvolver estratégias personalizadas que impulsionem resultados reais. Desde o desenvolvimento de websites e gestão de redes sociais até campanhas de marketing digital e produção de conteúdo, a nossa equipa dedicada está pronta para levar a sua marca ao próximo nível.</code></p>
+    </section>
+
+    <section id="valores" class="dark">
+        <div class="container">
+            <h2>Os Nossos Valores</h2>
+            <br>
+           <code>
+            <p><strong>Criatividade:</strong> Acreditamos no poder das ideias inovadoras para diferenciar os nossos clientes no mercado.</p>
+            <p><strong>Excelência:</strong> Esforçamo-nos por entregar trabalhos de alta qualidade, com atenção aos detalhes e foco nos resultados.</p>
+            <p><strong>Colaboração:</strong> Valorizamos parcerias duradouras e transparentes com os nossos clientes, trabalhando juntos para alcançar objetivos comuns.</p>
+            <p><strong>Paixão:</strong> Somos apaixonados pelo que fazemos e isso reflete-se em cada projeto que entregamos.</p>
+           </code> 
+        </div>
+    </section>
+</section>
+
+<section class="inline">
+
+    <section id="equipa" class="container">
+        <h2><span>A Nossa Equipa</span></h2>
+        <br>
+        <p><code>Com uma equipa diversificada de profissionais talentosos, incluindo designers, programadores, estratégias de marketing e criadores de conteúdo, estamos preparados para enfrentar qualquer desafio. A nossa equipa é o coração da CIBERCOM, trazendo uma combinação de expertise técnica e visão criativa para cada projeto.</code></p>
+    </section>
+
+    <section id="servicos" class="dark">
+        <div class="container">
+            <h2>O Que Fazemos</h2>
+            <br>
+            <code>
+                <p><strong>Desenvolvimento de Websites:</strong> Criamos websites responsivos, intuitivos e visualmente atraentes que refletem a identidade da sua marca.</p>
+            <p><strong>Marketing Digital:</strong> Oferecemos estratégias de SEO, e-mail marketing e muito mais para aumentar a sua visibilidade online.</p>
+            <p><strong>Gestão de Redes Sociais:</strong> Envolvemos a sua audiência com conteúdo relevante e campanhas interativas nas principais plataformas sociais.</p>
+            <p><strong>Branding e Design Gráfico:</strong> Desenvolvemos identidades visuais fortes e coesas que destacam a sua marca no mercado.</p>
+            <p><strong>Produção de Conteúdo:</strong> Criamos conteúdo envolvente e de alta qualidade que ressoa com o seu público-alvo.</p>
+            </code>
+            
+        </div>
+    </section>
+</section>
+
+    
+
+    <section id="contacto" class="container">
+        <section id="formulario" class="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO</span></h2>
+                <form>
+                    <h1>Send Data to WhatsApp</h1>
+                    <label for="name">Name</label>
+                    <input type="text" class="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="text" class="email" id="email">
+                    <label for="number">Number</label>
+                    <input type="text" class="number" id="number">
+                    <label for="message">Message</label>
+                    <textarea class="message" id="message"></textarea>
+                    <button type="button" onclick="sendwhatsapp();">Send via WhatsApp</button>
+                </form>
+                <script>
+                    function sendwhatsapp() {
+                        var phonenumber = "+351939769291";
+                        var name = document.querySelector('.name').value;
+                        var email = document.querySelector('.email').value;
+                        var number = document.querySelector('.number').value;
+                        var message = document.querySelector('.message').value;
+                        var url = "https://wa.me/" + phonenumber + "?text=" 
+                                + "*Name:* " + name + "%0a" 
+                                + "*Email:* " + email + "%0a"
+                                + "*Number:* " + number + "%0a"
+                                + "*Message:* " + message + "%0a%0a"
+                                + "This is an example of send HTML form data to WhatsApp";
+                        window.open(url, '_blank').focus();
+                    }
+                </script>
+                <br>
+                <div class="btn-social">
+                    <a href="https://www.instagram.com/cibercom.40?igsh=MTZzOHZlY21zcWJpYw=="><button><i class="bi bi-instagram"></i></button></a>
+                    <a href="https://www.tiktok.com/@ciber.com5?_t=8meVE4TB0fx&_r=1"><button><i class="bi bi-tiktok"></i></button></a>
+                    <a href="https://www.facebook.com/profile.php?id=61559791553803"><button><i class="bi bi-facebook"></i></button></a>
+                </div>
+                <br>
+                <div class="line-footer borda">
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:cibercom40@gmail.com">cibercom40@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+        <a href="cibercom40@gmail.com"></a>
+    </section>
+</body>
+</html>
